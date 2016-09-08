@@ -64,7 +64,7 @@ Under construction...
     Use the Observer design pattern to allow all 
     accessories to be plugged in.
     <hr>
-    [FrightMachine] has a member `List<Acessory> accessories`.
+    [FrightMachine] has a member `List<Accessory> accessories`.
     They are observers. They can be added or removed. And
     all of them in `@Override`-n method `onMotionDetected`
     will be activated by calling their method:
@@ -77,6 +77,34 @@ Under construction...
      in our runnable methods [Main] and [FrightMachineTest].
     <hr>
     Both [Horn] and [Strobe] can be easily added to `accessories`
-    as observers, which they are in [Main] and 
-    [FrightMachineTest].
+    as observers, because they `extend` [Accessory]. 
+<hr>
+2. <a id="task-2"></a>
+    Use another design pattern to adapt the camera 
+    to be an accessory.
+    <hr>
+    I used adapter desing pattern to adapt [Camera]
+    to be [Accessory] using [DeviceWithIntArgAdaptedAsAccessory] 
+    class. 
+    <hr>
+    This class has two args in constructor:
+    `Consumer<Integer>` and `int number`. 
+    First argument is function that takes
+    `Integer` or `int` and returns void, just like
+    Camera does.
+    <hr>
+    [DeviceWithIntArgAdaptedAsAccessory] `implements`
+    [Accessory] to be able to be included as observers in
+    `accessories` of our [FrightMachine].
+    <hr>
+    And because it implements [Accessory] it 
+    `@Override`-s `activate` method. And inside of
+    it we exectude passed method of [Camera]-like
+    device that takes `Integer` or `int` with
+    `int number` passed in constructor. In case of
+    [Camera] this method is `snapPhotos`.
+    <hr>
+    This way camera can be adapted as [Accessory]
+    and when `activate` method will be called in
+    [FrightMachine], [Camera] will snap her photos.
 <hr>
