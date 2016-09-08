@@ -124,7 +124,7 @@ Under construction...
     This way test works.
 <hr>
 
-### Links
+### Links <a id="links"></a>
 
 - [Main]
 - [DeviceWithIntArgAdaptedAsAccessory]
