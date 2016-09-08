@@ -57,7 +57,10 @@
 
 ### Eclipse Installation instructions
 <hr> <a id="eclipse"></a>
-Under construction...
+Once again I just added `apply plugin: eclipse` in
+[build.gradle] and it works perfectly with
+importing. No need to generating any files and 
+pushing them back and forth.
 
 ### Tasks
 1. <a id="task-1"></a>
