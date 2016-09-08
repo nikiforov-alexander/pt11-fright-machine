@@ -91,7 +91,7 @@ Under construction...
     `Consumer<Integer>` and `int number`. 
     First argument is function that takes
     `Integer` or `int` and returns void, just like
-    Camera does.
+    `Camera.snapPhotos` does.
     <hr>
     [DeviceWithIntArgAdaptedAsAccessory] `implements`
     [Accessory] to be able to be included as observers in
@@ -107,4 +107,19 @@ Under construction...
     This way camera can be adapted as [Accessory]
     and when `activate` method will be called in
     [FrightMachine], [Camera] will snap her photos.
+<hr>
+3. <a id="task-3"></a>
+    Ensure unit tests pass.
+    <hr>
+    I modified `setUp` method in given 
+    [FrightMachineTest] by emulating the same
+    behavior as in [Main]:
+    - instantiate new [FrightMachine]
+    - create three new accessories to be added as 
+    observers: [Horn], [Strobe] and [Camera].
+    - add observers to machine: [Horn] and [Strobe] directly,
+    and [Camera] using adapter class 
+    [DeviceWithIntArgAdaptedAsAccessory]
+    <hr>
+    This way test works.
 <hr>
