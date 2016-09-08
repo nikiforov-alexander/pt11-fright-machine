@@ -53,3 +53,30 @@
 
 [build.gradle]:
     ./build.gradle "./build.gradle"
+    
+
+### Eclipse Installation instructions
+<hr> <a id="eclipse"></a>
+Under construction...
+
+### Tasks
+1. <a id="task-1"></a>
+    Use the Observer design pattern to allow all 
+    accessories to be plugged in.
+    <hr>
+    [FrightMachine] has a member `List<Acessory> accessories`.
+    They are observers. They can be added or removed. And
+    all of them in `@Override`-n method `onMotionDetected`
+    will be activated by calling their method:
+    `Accessory.activate`. 
+    <hr>
+    This method takes no arguments and also returns nothing,
+    just prints to console using `System.out.println`.
+    <hr>
+    `onMotionDetected` is the main method that will be used
+     in our runnable methods [Main] and [FrightMachineTest].
+    <hr>
+    Both [Horn] and [Strobe] can be easily added to `accessories`
+    as observers, which they are in [Main] and 
+    [FrightMachineTest].
+<hr>
